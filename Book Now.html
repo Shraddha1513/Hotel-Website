@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Booking</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Favicon-->
+    <link rel="icon" type="image/jpg"  href="/images/RRR.jpg">
+    
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+     <!-- Font Awesome CSS v5.2.1 -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+
+     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="js/main.js">
+</head>
+<style>
+  
+ body{
+        background-image:url(/images/g-swimming.jpg);
+        background-repeat:no-repeat;
+        background-attachment:center fixed;
+        background-size:cover;
+        height:100%;
+        width: 100%;
+     }
+     </style>
+
+<body data-bs-spy="sroll" data-bs-target=".navbar" data-bs-offset="100">
+
+ <!--navabar section-->
+ <header class="header_wrapper mt-5"> 
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/ROyal.jpg" class="img-fluid w-100" alt="..."></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!--span class="navbar-toggler-icon_></--span>-->
+        <i class="fas fa-stream navbar-toggler-icon"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav menu-navabr-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index1.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Rooms.html">Rooms</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#Services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Team">Team</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="Gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Price.html">Price</a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="nav-link" href="Blog.html">Blog</a>
+          </li>
+          <li class="nav-item mt-3 mt-lg-0 me-3">
+            <a class="main-btn" href="Sign In.html">Sign In</a>
+          </li>
+          <li class="nav-item mt-3 mt-lg-0">
+            <a class="main-btn" href="Book Now.html">BOOK NOW</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- Navbar section exit -->
+
+ <section class="b">
+<div class="container">
+  <div class="row row1">
+        <div class="col-lg-8 col-md-8 mb-6">
+      <div class="card p-5 text-center rounded-3 mt-5 mb-5">
+        
+    <form>
+        <h3 class="mb-4">Book Now</h3>
+        
+        <input type="text" id="fullname" name="fullname" placeholder="Full name*" class="form-control"><br>
+      
+        <input type="text" id="E-mail address" name="emailaddress" placeholder="E-mail address*" class="form-control"><br>
+        
+        <input type="mobno" id="mobno" name="mobno" placeholder="Mobile Number* "class="form-control"><br>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <input type="text" id="State" name="State" placeholder="State* " class="form-control">
+          </div>
+         <div class="col-lg-6">
+          <input type="text" id="City" name="City" placeholder="City* " class="form-control"><br>
+        </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <label for=" Check In:">Check In</label>
+            <input type="date" id="check-in" name="check-in" placeholder="Check-In* "class="form-control">
+         </div>
+         <div class="col-lg-6">
+          <label for=" Check In:">Check Out</label>
+          <input type="date" id="check-out" name="check-out" placeholder="Check-Out* "class="form-control"><br>
+         </div>
+        </div>
+                      
+        <div class="row">
+          <div class="col-lg-6">
+            <select class="form-select form-control">
+              <option selected>Person</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+         <div class="col-lg-6">
+          <select class="form-select form-control">
+            <option selected>Choose Room</option>
+            <option value="1">Superior Executive</option>
+            <option value="2">Luxury Room</option>
+            <option value="3">Premium Room</option>
+          </select><br>
+   </div>
+        </div>
+
+        <button type="submit" class="main-btnn rounded-2 px-lg-2">Book Now</button>
+          </form>
+        </div>
+    </div>
+</div>
+</div>
+        </section>
+        <!-- book now exit -->
+
+<!-- footer -->
+<footer>
+  <section id="contact" class="footer_wrapper mt-3 mt-md-0 pb-0">
+    <div class="container pb-3">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <h5>Hotel Location</h5>
+          <p class="ps-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, dolore?</p>
+          <div class="contact-info">
+            <ul class="list-unstyled">
+              <li><a href="#"><i class="fa fa-home me-3">No.Mumbai,India</i></a></li>
+              <li><a href="#"><i class="fa fa-phone me-3">2375 675 987</i></a></li>
+              <li><a href="#"><i class="fa fa-envelope me-3">royalgalaxy@gmail.com</i></a></li>
+            </ul>
+          </div>
+        </div>
+  
+  <div class="col-lg-2 col-md-5 ms-5">
+    <h5>More Links</h5>
+    <ul class="link-widget p-0">
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Our Office</a></li>
+      <li><a href="#">Dilivery</a></li>
+      <li><a href="#">Our Store</a></li>
+      <li><a href="#">Guarantee</a></li>
+      <li><a href="#">Buy Gift Card</a></li>
+      <li><a href="#">Return Policy</a></li>
+    </ul>
+  </div>
+
+  <div class="col-lg-2 col-md-5 ms-5">
+    <h5>More Links</h5>
+    <ul class="link-widget p-0">
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Our Office</a></li>
+      <li><a href="#">Dilivery</a></li>
+      <li><a href="#">Our Store</a></li>
+      <li><a href="#">Guarantee</a></li>
+      <li><a href="#">Buy Gift Card</a></li>
+      <li><a href="#">Return Policy</a></li>
+    </ul>
+  </div>
+   
+    
+  <div class="col-lg-3 col-md-6">
+    <h5>Join To Our Newsletter</h5>
+    <div class="form-group mb-5">
+     <a href="Subscribtion.html"> 
+      <button type="submit" class="main-btn rounded-2 mt-3 border-white text-white">Subscribe</button></a>
+    </div>
+
+    <h5>Stay Connected</h5>
+    <ul class="list-unstyled socail-network d-flex align-items-center p-0">
+      <li><a href="https://www.facebook.com/"target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+      <li><a href="https://vimeo.com/log_in" target="_blank"><i class="fab fa-vimeo-v"></i></a></li>
+    </ul>
+  </div>
+      </div>
+    </div>
+  
+  <div class="container-fluid copyright-section">
+    <p>Copyright<span> &copy Royal Galaxy </span>All Rights Are Reserved</p>
+  </div>
+  </section>
+  </footer>
+  <!-- footer exit-->
+
+  
+  
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
