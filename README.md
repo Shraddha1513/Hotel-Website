@@ -23,4 +23,4 @@ This website allows people to check room availability, price, services and booki
 
 ![Screenshot 2024-01-04 101431](https://github.com/Shraddha1513/Hotel-Website/assets/140946907/5a819d5e-670e-4248-986d-50811adc093e)
 
-![Uploading Screenshot 2024-01-04 101451.png…]()
+![Screenshot 2024-01-04 101451](https://github.com/Shraddha1513/Hotel-Website/assets/140946907/27c1940f-2ffa-4a9e-ac87-5dfd3472e8c9)
