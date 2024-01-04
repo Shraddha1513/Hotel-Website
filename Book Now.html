@@ -19,8 +19,8 @@
         
 
      <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/resposnsive.style.css">
 
-    <link rel="stylesheet" href="js/main.js">
 </head>
 <style>
   
@@ -49,7 +49,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav menu-navabr-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index1.html">Home</a>
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="About.html">About</a>
@@ -69,10 +69,10 @@
           <li class="nav-item">
             <a class="nav-link" href="Price.html">Price</a>
           </li>
-          <li class="nav-item me-2">
+           <li class="nav-item me-lg-2">
             <a class="nav-link" href="Blog.html">Blog</a>
           </li>
-          <li class="nav-item mt-3 mt-lg-0 me-3">
+          <li class="nav-item mt-3 mt-lg-0 me-lg-3">
             <a class="main-btn" href="Sign In.html">Sign In</a>
           </li>
           <li class="nav-item mt-3 mt-lg-0">
@@ -87,42 +87,44 @@
 
  <section class="b">
 <div class="container">
-  <div class="row row1">
-        <div class="col-lg-8 col-md-8 mb-6">
+  <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-8 mb-6">
       <div class="card p-5 text-center rounded-3 mt-5 mb-5">
         
-    <form>
+    <form class="Book_nowForm" id="Book_now">
         <h3 class="mb-4">Book Now</h3>
         
-        <input type="text" id="fullname" name="fullname" placeholder="Full name*" class="form-control"><br>
-      
-        <input type="text" id="E-mail address" name="emailaddress" placeholder="E-mail address*" class="form-control"><br>
-        
-        <input type="mobno" id="mobno" name="mobno" placeholder="Mobile Number* "class="form-control"><br>
-
+        <input type="text" id="fullname" name="fullname" required placeholder="Full name*" class="form-control input1">
+        <div id="first-name-err" class="error"></div>
+        <input type="text" id="emailAddress" name="emailAddress" required placeholder="E-mail address*" class="form-control input1">
+        <div id="email-err" class="error"></div>
+        <input type="mobno" id="mobileNumber" name="mobno" required placeholder="Mobile Number* "class="form-control input1">
+        <div id="mobile-number-err" class="error"></div>
         <div class="row">
-          <div class="col-lg-6">
-            <input type="text" id="State" name="State" placeholder="State* " class="form-control">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+            <input type="text" id="stateName" name="State" placeholder="State* " class="form-control input2">
+            <div id="state-err" class="error"></div>
           </div>
-         <div class="col-lg-6">
-          <input type="text" id="City" name="City" placeholder="City* " class="form-control"><br>
+         <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+          <input type="text" id="cityName" name="City" placeholder="City* " class="form-control input2">
+          <div id="city-err" class="error"></div>
         </div>
         </div>
 
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-6">
             <label for=" Check In:">Check In</label>
-            <input type="date" id="check-in" name="check-in" placeholder="Check-In* "class="form-control">
+            <input type="date" id="check-in" name="check-in" placeholder="Check-In* "class="form-control input2">
          </div>
-         <div class="col-lg-6">
+         <div class="col-lg-6 col-md-6 col-sm-6 col-6">
           <label for=" Check In:">Check Out</label>
-          <input type="date" id="check-out" name="check-out" placeholder="Check-Out* "class="form-control"><br>
+          <input type="date" id="check-out" name="check-out" placeholder="Check-Out* "class="form-control input2"><br>
          </div>
         </div>
                       
         <div class="row">
-          <div class="col-lg-6">
-            <select class="form-select form-control">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+            <select class="form-select form-control input2">
               <option selected>Person</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -131,8 +133,8 @@
               <option value="5">5</option>
             </select>
           </div>
-         <div class="col-lg-6">
-          <select class="form-select form-control">
+         <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+          <select class="form-select form-control input2">
             <option selected>Choose Room</option>
             <option value="1">Superior Executive</option>
             <option value="2">Luxury Room</option>
@@ -167,7 +169,7 @@
           </div>
         </div>
   
-  <div class="col-lg-2 col-md-5 ms-5">
+  <div class="col-lg-2 col-md-5 ms-lg-5 ms-md-5">
     <h5>More Links</h5>
     <ul class="link-widget p-0">
       <li><a href="#">About Us</a></li>
@@ -180,7 +182,7 @@
     </ul>
   </div>
 
-  <div class="col-lg-2 col-md-5 ms-5">
+  <div class="col-lg-2 col-md-5 ms-lg-5 ms-md-5">
     <h5>More Links</h5>
     <ul class="link-widget p-0">
       <li><a href="#">About Us</a></li>
@@ -219,8 +221,203 @@
   </footer>
   <!-- footer exit-->
 
+
+  <script>
+    document.getElementById("Book_now").onsubmit=function(e){
+    
+      
+    fullNameValidation();
+    emailAddressValidation();
+    mobileNumberValidation();
+    stateNameValidation();
+   cityNameValidation();
+   
+    if(fullNameValidation()==true && 
+    emailAddressValidation() == true &&
+      mobileNumberValidation()==true &&
+      stateNameValidation()==true &&
+      cityNameValidation()==true){
+      return true;
+    }else{
+      return false;
+    }
+    }
+    
+    
+    // First Name Validation
+    var fullName= document.getElementById("fullname");
+    
+    var fullNameValidation=function(){
+    
+       fullNameValue=fullName.value.trim(); 
+       validFirstName=/^[A-Za-z]+$/;
+       fullNameErr=document.getElementById('first-name-err');
+    
+       if(fullNameValue=="")
+       {
+        fullNameErr.innerHTML="Full Name is required";
+    
+       }else if(!validFirstName.test(fullNameValue)){
+         fullNameErr.innerHTML="First Name must be only string without white spaces";
+       }else{
+         fulltNameErr.innerHTML="";
+         return true;
+        
+       }
+    }
+    
+    fullName.oninput=function(){
+       
+       fullNameValidation();
+    }
+
+    
+     // Email Address Validation
+     var emailAddress= document.getElementById("emailAddress");;
+     var emailAddressValidation= function(){
+    
+      emailAddressValue=emailAddress.value.trim(); 
+       validEmailAddress=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       emailAddressErr=document.getElementById('email-err');
+    
+       if(emailAddressValue=="")
+       {
+        emailAddressErr.innerHTML="Email Address is required";
+    
+       }else if(!validEmailAddress.test(emailAddressValue)){
+         emailAddressErr.innerHTML="Email Address must be in valid formate with @ symbol";
+       }else{
+         emailAddressErr.innerHTML="";
+         return true;
+       }
+    
+     }
+    
+    emailAddress.oninput=function(){
+    
+       emailAddressValidation();
+    }
+    
+
+    // Mobile Number Validation
+ var mobileNumber= document.getElementById("mobileNumber");
+
+var mobileNumberValidation = function(){
+
+  mobileNumberValue=mobileNumber.value.trim(); 
+  validMobileNumber=/^[0-9]*$/;
+  mobileNumberErr=document.getElementById('mobile-number-err');
+
+  if(mobileNumberValue=="")
+  {
+   mobileNumberErr.innerHTML="Mobile Number is required";
+
+  }else if(!validMobileNumber.test(mobileNumberValue)){
+    mobileNumberErr.innerHTML="Mobile Number must be a number";
+  }else if(mobileNumberValue.length!=10){
+
+     mobileNumberErr.innerHTML="Mobile Number must have 10 digits";
+  }
+  else{
+    mobileNumberErr.innerHTML="";
+    return true;
+  }
+
+}
+mobileNumber.oninput=function(){
+
+  mobileNumberValidation();
+}
+     
+    // state Name Validation
+  var stateName= document.getElementById("stateName");
+  
+  var stateNameValidation=function(){
+  
+    stateNameValue=stateName.value.trim(); 
+     validstateName=/^[A-Za-z]+$/;
+     stateNameErr=document.getElementById('state-err');
+  
+     if(stateNameValue=="")
+     {
+      stateNameErr.innerHTML="state Name is required";
+  
+     }else if(!validcityName.test(stateNameValue)){
+      stateNameErr.innerHTML="state Name must be only string ";
+     }else{
+      stateNameErr.innerHTML="";
+       return true;
+      
+     }
+  }
+  
+  stateName.oninput=function(){
+     
+    stateNameValidation();
+  }
   
   
+  // city Name Validation
+  var cityName= document.getElementById("cityName");
+  
+  var cityNameValidation=function(){
+  
+     cityNameValue=cityName.value.trim(); 
+     validcityName=/^[A-Za-z]+$/;
+     cityNameErr=document.getElementById('city-err');
+  
+     if(cityNameValue=="")
+     {
+      cityNameErr.innerHTML="city Name is required";
+  
+     }else if(!validcityName.test(cityNameValue)){
+       cityNameErr.innerHTML="city Name must be only string ";
+     }else{
+       cityNameErr.innerHTML="";
+       return true;
+      
+     }
+  }
+  
+  cityName.oninput=function(){
+     
+     cityNameValidation();
+  }
+  
+  
+    
+    
+    // validation on submit
+    
+    
+    document.getElementById("Book_now").onsubmit=function(e){
+    
+      
+      firstNameValidation();
+      emailAddressValidation();
+      mobileNumberValidation();
+      stateNameValidation();
+      cityNameValidation();
+ 
+    
+    
+      if(firstNameValidation()==true && 
+      emailAddressValidation()==true &&
+        mobileNumberValidation() && 
+        stateNameValidation()== true &&
+        cityNameValidation()==true ){
+        return true;
+      }else{
+        return false;
+      }
+    }
+    
+    
+    </script>
+  
+  
+    <link rel="stylesheet" href="js/main.js">
+    
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">

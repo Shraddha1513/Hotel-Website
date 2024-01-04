@@ -105,7 +105,7 @@ label {
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav menu-navabr-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index1.html">Home</a>
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="About.html">About</a>
@@ -125,10 +125,10 @@ label {
             <li class="nav-item">
               <a class="nav-link" href="Price.html">Price</a>
             </li>
-            <li class="nav-item me-2">
-              <a class="nav-link" href="Blog.html">Blog</a>
-            </li>
-            <li class="nav-item mt-3 mt-lg-0 me-3">
+             <li class="nav-item me-lg-2">
+            <a class="nav-link" href="Blog.html">Blog</a>
+          </li>
+            <li class="nav-item mt-3 mt-lg-0 me-lg-3">
               <a class="main-btn" href="Sign In.html">Sign In</a>
             </li>
             <li class="nav-item mt-3 mt-lg-0">
@@ -145,57 +145,66 @@ label {
 <div class="feedback_wrapper mt-5">
   
 <div class="container">    
-  <form>    
+  <form id="feedbackForm">    
     <div class="row row_f">  
         <h2 class="m-5 text-center"><b>We appreciate your feedback!</b></h2>    
-      <div class="col-25">    
-        <label for="fname">First Name</label>    
-      </div>    
-      <div class="col-75">    
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">    
-      </div>    
-    </div>    
-    <div class="row row_f">    
-      <div class="col-25">    
-        <label for="lname">Last Name</label>    
-      </div>    
-      <div class="col-75">    
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">    
-      </div>    
-    </div>    
-    <div class="row row_f">    
-        <div class="col-25">    
-          <label for="email">Email Id</label>    
+        <div class="row row_f">     
+          <div class="col-25">    
+            <label for="fname">First Name</label>    
+          </div>    
+          <div class="col-75">    
+            <input type="text" id="firstName" name="firstname" placeholder="Your name.." required> 
+            <div id="first-name-err" class="error"></div>   
+          </div> 
+    
         </div>    
-        <div class="col-75">    
-          <input type="email" id="email" name="mailid" placeholder="Your Email Id..">    
+        <div class="row row_f">    
+          <div class="col-25">    
+            <label for="lname">Last Name</label>    
+          </div>    
+          <div class="col-75">    
+            <input type="text" id="lastName" name="lastname" placeholder="Your last name.." required>  
+            <div id="last-name-err" class="error"></div>  
+          </div>    
+    
         </div>    
-      </div>    
-    <div class="row row_f">    
-      <div class="col-25">    
-        <label for="country">Country</label>    
-      </div>    
-      <div class="col-75">    
-        <select id="country" name="country">    
-            <option value="none">Select Country</option>    
-          <option value="australia">Australia</option>    
-          <option value="canada">Canada</option>    
-          <option value="usa">USA</option>    
-          <option value="russia">Russia</option>    
-          <option value="japan">Japan</option>    
-          <option value="india">India</option>    
-          <option value="china">China</option>    
-        </select>    
-      </div>    
-    </div>    
-    <div class="row row_f">    
-      <div class="col-25">    
-        <label for="feed_back">Feedback</label>    
-      </div>    
-      <div class="col-75">    
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>    
-      </div>    
-    </div>    
+        <div class="row row_f">    
+            <div class="col-25">    
+              <label for="email">Email Id</label>    
+            </div>    
+            <div class="col-75">    
+              <input type="email" id="emailAddress" name="mailid" placeholder="Your Email Id.." required> 
+              <div id="email-err" class="error"></div>   
+            </div> 
+    
+          </div>    
+        <div class="row row_f">    
+          <div class="col-25">    
+            <label for="country">Country</label>    
+          </div>    
+          <div class="col-75">    
+            <select id="country" name="country" required>    
+                <option value="none">Select Country</option>    
+              <option value="australia">Australia</option>    
+              <option value="canada">Canada</option>    
+              <option value="usa">USA</option>    
+              <option value="russia">Russia</option>    
+              <option value="japan">Japan</option>    
+              <option value="india">India</option>    
+              <option value="china">China</option>    
+            </select> 
+            <div class="error"></div>    
+          </div>    
+        </div>    
+        <div class="row row_f">    
+          <div class="col-25">    
+            <label for="feed_back">Feedback</label>    
+          </div>    
+          <div class="col-75">    
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px" required></textarea>    
+          </div>    
+        </div>    
+    
     <div class="row_f m-5 justify-content-center d-grid">    
       <button id="b1" type="submit" value="Submit">Submit</button>    
     </div>    
@@ -210,71 +219,71 @@ label {
 
 <!-- footer -->
 <footer>
-    <section id="contact" class="footer_wrapper mt-3 mt-md-0 pb-0">
-      <div class="container pb-3">
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <h5>Hotel Location</h5>
-            <p class="ps-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, dolore?</p>
-            <div class="contact-info">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-home me-3">No.Mumbai,India</i></a></li>
-                <li><a href="#"><i class="fa fa-phone me-3">2375 675 987</i></a></li>
-                <li><a href="#"><i class="fa fa-envelope me-3">royalgalaxy@gmail.com</i></a></li>
-              </ul>
-            </div>
+  <section id="contact" class="footer_wrapper mt-3 mt-md-0 pb-0">
+    <div class="container pb-3">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <h5>Hotel Location</h5>
+          <p class="ps-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, dolore?</p>
+          <div class="contact-info">
+            <ul class="list-unstyled">
+              <li><a href="#"><i class="fa fa-home me-3">No.Mumbai,India</i></a></li>
+              <li><a href="#"><i class="fa fa-phone me-3">2375 675 987</i></a></li>
+              <li><a href="#"><i class="fa fa-envelope me-3">royalgalaxy@gmail.com</i></a></li>
+            </ul>
           </div>
-    
-    <div class="col-lg-2 col-md-5 ms-5">
-      <h5>More Links</h5>
-      <ul class="link-widget p-0">
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Our Office</a></li>
-        <li><a href="#">Dilivery</a></li>
-        <li><a href="#">Our Store</a></li>
-        <li><a href="#">Guarantee</a></li>
-        <li><a href="#">Buy Gift Card</a></li>
-        <li><a href="#">Return Policy</a></li>
-      </ul>
-    </div>
-  
-    <div class="col-lg-2 col-md-5 ms-5">
-      <h5>More Links</h5>
-      <ul class="link-widget p-0">
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Our Office</a></li>
-        <li><a href="#">Dilivery</a></li>
-        <li><a href="#">Our Store</a></li>
-        <li><a href="#">Guarantee</a></li>
-        <li><a href="#">Buy Gift Card</a></li>
-        <li><a href="#">Return Policy</a></li>
-      </ul>
-    </div>
-     
-      
-    <div class="col-lg-3 col-md-6">
-      <h5>Join To Our Newsletter</h5>
-      <div class="form-group mb-5">
-       <a href="Subscribtion.html"> 
-        <button type="submit" class="main-btn rounded-2 mt-3 border-white text-white">Subscribe</button></a>
-      </div>
-  
-      <h5>Stay Connected</h5>
-      <ul class="list-unstyled socail-network d-flex align-items-center p-0">
-        <li><a href="https://www.facebook.com/"target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
-        <li><a href="https://vimeo.com/log_in" target="_blank"><i class="fab fa-vimeo-v"></i></a></li>
-      </ul>
-    </div>
         </div>
-      </div>
+  
+  <div class="col-lg-2 col-md-5 ms-lg-5 ms-md-5">
+    <h5>More Links</h5>
+    <ul class="link-widget p-0">
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Our Office</a></li>
+      <li><a href="#">Dilivery</a></li>
+      <li><a href="#">Our Store</a></li>
+      <li><a href="#">Guarantee</a></li>
+      <li><a href="#">Buy Gift Card</a></li>
+      <li><a href="#">Return Policy</a></li>
+    </ul>
+  </div>
+
+  <div class="col-lg-2 col-md-5 ms-lg-5 ms-md-5">
+    <h5>More Links</h5>
+    <ul class="link-widget p-0">
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Our Office</a></li>
+      <li><a href="#">Dilivery</a></li>
+      <li><a href="#">Our Store</a></li>
+      <li><a href="#">Guarantee</a></li>
+      <li><a href="#">Buy Gift Card</a></li>
+      <li><a href="#">Return Policy</a></li>
+    </ul>
+  </div>
+   
     
-    <div class="container-fluid copyright-section">
-      <p>Copyright<span> &copy Royal Galaxy </span>All Rights Are Reserved</p>
+  <div class="col-lg-3 col-md-6">
+    <h5>Join To Our Newsletter</h5>
+    <div class="form-group mb-5">
+     <a href="Subscribtion.html"> 
+      <button type="submit" class="main-btn rounded-2 mt-3 border-white text-white">Subscribe</button></a>
     </div>
-    </section>
-    </footer>
+
+    <h5>Stay Connected</h5>
+    <ul class="list-unstyled socail-network d-flex align-items-center p-0">
+      <li><a href="https://www.facebook.com/"target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+      <li><a href="https://vimeo.com/log_in" target="_blank"><i class="fab fa-vimeo-v"></i></a></li>
+    </ul>
+  </div>
+      </div>
+    </div>
+  
+  <div class="container-fluid copyright-section">
+    <p>Copyright<span> &copy Royal Galaxy </span>All Rights Are Reserved</p>
+  </div>
+  </section>
+  </footer>
     <!-- footer exit-->
   
   
@@ -289,6 +298,128 @@ label {
       
          <!--Custom js link-->
          <script src="js/main.js"></script> 
+
+         
+         <script>
+          document.getElementById("feedbackForm").onsubmit=function(e){
+          
+            
+          firstNameValidation();
+          lastNameValidation();
+          emailAddressValidation();
+         
+          if(firstNameValidation()==true && 
+            lastNameValidation()==true && 
+            emailAddressValidation() == true){
+            return true;
+          }else{
+            return false;
+          }
+          }
+          
+          
+          // First Name Validation
+          var firstName= document.getElementById("firstName");
+          
+          var firstNameValidation=function(){
+          
+             firstNameValue=firstName.value.trim(); 
+             validFirstName=/^[A-Za-z]+$/;
+             firstNameErr=document.getElementById('first-name-err');
+          
+             if(firstNameValue=="")
+             {
+              firstNameErr.innerHTML="First Name is required";
+          
+             }else if(!validFirstName.test(firstNameValue)){
+               firstNameErr.innerHTML="First Name must be only string without white spaces";
+             }else{
+               firstNameErr.innerHTML="";
+               return true;
+              
+             }
+          }
+          
+          firstName.oninput=function(){
+             
+             firstNameValidation();
+          }
+          
+            // Last Name Validation
+            var lastName= document.getElementById("lastName");
+          
+            var lastNameValidation= function(){
+          
+             lastNameValue=lastName.value.trim(); 
+             validLastName=/^[A-Za-z]+$/;
+             lastNameErr=document.getElementById('last-name-err');
+          
+             if(lastNameValue=="")
+             {
+              lastNameErr.innerHTML="Last Name is required";
+          
+             }else if(!validLastName.test(lastNameValue)){
+               lastNameErr.innerHTML="Last Name must be only string without white spaces";
+             }else{
+               lastNameErr.innerHTML="";
+               return true;
+             }
+            }
+          
+          lastName.oninput=function(){
+          
+             lastNameValidation();
+          }
+          
+           // Email Address Validation
+           var emailAddress= document.getElementById("emailAddress");;
+           var emailAddressValidation= function(){
+          
+            emailAddressValue=emailAddress.value.trim(); 
+             validEmailAddress=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+             emailAddressErr=document.getElementById('email-err');
+          
+             if(emailAddressValue=="")
+             {
+              emailAddressErr.innerHTML="Email Address is required";
+          
+             }else if(!validEmailAddress.test(emailAddressValue)){
+               emailAddressErr.innerHTML="Email Address must be in valid formate with @ symbol";
+             }else{
+               emailAddressErr.innerHTML="";
+               return true;
+             }
+          
+           }
+          
+          emailAddress.oninput=function(){
+          
+             emailAddressValidation();
+          }
+          
+          
+          // validation on submit
+          
+          
+          document.getElementById("feedbackForm").onsubmit=function(e){
+          
+            
+            firstNameValidation();
+            lastNameValidation();
+            emailAddressValidation();
+          
+          
+            if(firstNameValidation()==true && 
+              lastNameValidation()==true && 
+              emailAddressValidation() == true ){
+              return true;
+            }else{
+              return false;
+            }
+          }
+          
+          
+          </script>
       
   </body>
   </html>

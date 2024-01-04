@@ -84,6 +84,9 @@ section{
 
 h1{
     font-size: 3.75rem;
+
+
+
     line-height: 4.25rem;
     font-weight: 700;
     color:var(--text-white);
@@ -196,7 +199,10 @@ top: 0%;
 .carousel-item{
     height:700px;
 }
-
+.d-block{
+    height: 100%;
+  width: 100%;
+}
 .booking-area{
     background: var(--bg-white);
     box-shadow: 0 0.625rem 0.9375rem 0 rgb(0, 0, 0 ,10%);
@@ -263,17 +269,17 @@ top: 0%;
 
 .rooms_wrapper .room-items{
     position: relative;
-    padding: 3rem 1.875rem;
+    padding: 2.5rem 1.875rem;
     background-color:rgb(114, 116, 117);
-  
+    border-radius: 10px;
 }
 
 .rooms_wrapper .room-items img{
     width: 100%;
-    height: 50%;
+    height: 350px;
     -ms-transition:all 400ms ease-in 0s;
     transition:all 400ms ease-in 0s;
-    
+    border-radius: 10px;
 }
 
 .rooms_wrapper .room-items:hover img{
@@ -377,23 +383,24 @@ top: 0%;
 }
 
 .service-menu-area ul li:nth-child(1){
-    margin-left: 5.0rem;
+    margin-left: 4.4rem;
 }
 
 .service-menu-area ul li:nth-child(2){
-    margin-left: 3.00rem;
+    margin-left: 2.4rem;
 }
 .service-menu-area ul li:nth-child(3){
-    margin-left: -1.375rem;
+    margin-left: -2.2rem;
 }
 .service-menu-area ul li:nth-child(4){
-    margin-left: -9.999rem;
+    margin-left: -10.999rem;
 }
 .service-menu-area ul li a p,
 .service-menu-area ul li a h5{
-    padding-left:6.875rem; ;
+    padding-left:6.875rem;
     display: block;
     text-align: left;
+    font-size: 1rem;
 }
 .service-menu-area ul li a p span{
     color:var(--secondary-color);
@@ -545,9 +552,11 @@ margin-top: 2rem;
 }
 
 /* footer */
+
 .footer_wrapper{
     background-color:var(--bg-black);
 }
+
 .footer_wrapper h5{
     color: var(--text-white);
     margin-bottom: 1.25rem;
@@ -623,8 +632,8 @@ overflow: hidden;
 }
 
 .team_wrapper .team-info{
-    background-color: var(--secondary-color);
-  position: absolute;
+background-color: var(--secondary-color);
+position: absolute;
 width: 100%;
 bottom: 0;
 text-align: center;
@@ -677,7 +686,7 @@ font-weight: 900;
 .cust_feedback .card:hover,
 .cust_feedback .card:hover h5,
 .cust_feedback .card:hover p{
-background-color: var(--secondary-color);
+background-color: orange;
 color:white;
 font-weight: 900;
 }
@@ -714,11 +723,23 @@ font-weight: 900;
   }
 
   /* book now */
-  .b .row1{
-    margin-left: 375px;
- }  
+
+ .b .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+ }
+ .b .Book_nowForm{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+ }
 .b .card{
-   background-color:rgba(10,10,10,0.8);  
+   background-color:rgba(10,10,10,0.8); 
+   border-radius: 20px; 
+   width: 140%;
 }
 
 .b .card h3{
@@ -730,8 +751,7 @@ font-weight: 900;
 .b .main-btnn{
     font-size: 1rem;
     font-weight: 600;
-    text-transform: uppercase;
-   
+    text-transform: uppercase; 
     border: 0.0825rem solid var(--bg-color);
     padding: 0.4rem;;
     border-radius: 3.125rem;
@@ -761,16 +781,18 @@ font-weight: 900;
    
  }
  .check_wrapper .rate{
-     margin-top: 10rem;
-     margin-left: 5rem;
+     margin-top: 5rem;
+     margin-left: 2rem;
  } 
  .check_wrapper .main-btn{
-    
  background-color:rgb(19, 19, 19);
   }
 
+/* .check_wrapper table p{
+    color: #fff;
+} */
  .check_wrapper .room{
-     margin-left: 18rem;
+     margin-left: 8rem;
  } 
 .check_wrapper h2{
      font-weight: 700;
@@ -782,16 +804,18 @@ font-weight: 900;
  }
  .check_wrapper .container{
    background-color: rgb(244, 184, 94);
+   border-radius: 10px;
  }
  .check_wrapper img{
    height: 100%;
-   width: 200%;
+   width: 140%;
+   border-radius: 10px;
  }
- .check_wrapper .form_c img{
+ .check_wrapper .check_row img{
     -ms-transition:all 400ms ease-in 0s;
     transition:all 400ms ease-in 0s;   
 }
-.check_wrapper .form_c:hover img{
+.check_wrapper .check_row:hover img{
     -ms-transform:  scale3d(1.05,1.05,1.05);
     transform: scale3d(1.05,1.05,1.05);  
 }
@@ -837,7 +861,8 @@ font-weight: 900;
         color:black;
           margin-bottom: 3rem;
       }
-      .Subscribtion_wrapper .sub-form-input-label{
+      .Subscribtion_wrapper .sub-form-input-label,
+      .Subscribtion_wrapper .form-check-label{
           margin-bottom:1rem;  
           color: rgb(209, 123, 18);
           font-weight: 600;
@@ -849,21 +874,44 @@ font-weight: 900;
           margin-bottom:1rem;  
       }
       
-      /* Sign In and Sign Up*/
-      .Sign_wrapper{
-        margin-left: 25rem; 
-       }
-       .Sign_wrapper h4{
-         margin-bottom: 3rem;
-         font-weight: 600;
-       }
-       .Sign_wrapper .sub-form-input-element{
-         margin-bottom:1rem;
-       }
-       .Sign_wrapper .sub-form-input-label{
-      font-weight: 600;
-      margin-bottom:1rem;
-       }
-       .Sign_wrapper h6{
-         margin-left: 150px;
-       } 
+    
+/* sign in & sign up */
+.container1{
+    justify-content: center;
+    align-items: center;   
+    width: 100%;
+    height:100% ;
+    display: flex;
+  }
+  
+  .Sign_wrapper  form{
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 20px;
+  }
+  .Sign_wrapper h4{
+  margin-bottom: 3rem;
+  font-weight: 600;
+  }
+  .Sign_wrapper .sub-form-input-element{
+  margin-bottom:1rem;
+  height: 50px;
+  width: 380px;
+  }
+  .Sign_wrapper .sub-form-input-label{
+  font-weight: 600;
+  margin-bottom:1rem;
+  }
+  .Sign_wrapper .error {
+   width: 360px;
+   }
+   .error{
+    color:red;
+    font-size:13px;
+    margin-bottom:1rem;
+    font-weight: 600;
+  }
+/* *************************** */
