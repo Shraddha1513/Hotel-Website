@@ -6,7 +6,7 @@ Using this website you can generate revenue through online booking and email boo
 this can Promote the brand identity of the hotel.
 This website allows people to check room availability, price, services and booking.
 
-[Live demo](https://kirti27-p.github.io/Hotel-website/)
+[Live demo](https://shraddha1513.github.io/Hotel-Website/)
 
 # Output:
 
